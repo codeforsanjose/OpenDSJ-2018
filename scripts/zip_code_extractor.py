@@ -5,6 +5,9 @@ the US Census's census tract information.
 
 Census Zip Code Information:
  https://www.census.gov/geo/maps-data/data/cbf/cbf_zcta.html
+
+The Candidate information is downloaded as XLS files from:
+https://www.southtechhosting.com/SanJoseCity/CampaignDocsWebRetrieval/Search/SearchByBallotItem.aspx
 """
 
 import os
@@ -41,30 +44,41 @@ def run(settings):
 
         zip_codes_actual = candidate_file['Entity_ZIP4'].unique()
         filer_id = candidate_file['Filer_ID'].unique()[0]
-
-        for zip_code in zip_codes_actual:
-
-            if zip_code not in zip_file_dictionary:
-                # This is a major problem because it means
-                # that the US thinks the zip code doesn't exist.
-                logger.info(event='invalid zip code',
-                            zip_code=zip_code,
-                            zip_class=type(zip_code),
-                )
-                continue
-
-            geometry = zip_file_dictionary[zip_code]['geometry']
-            total = candidate_file[
-                candidate_file['Entity_ZIP4'] == zip_code
-            ]['Amount'].sum()
-            data.append({'zip_code': zip_code,
-                         'geometry': geometry,
-                         'total_amount': total,
-                         'filer_ID': filer_id,
-            })
+        
+        data = process_file(zip_file_dictionary=zip_file_dictionary,
+                            candidate_file=candidate_file,
+                            zip_codes_actual=zip_codes_actual,
+                            data=data,
+                            logger=logger,
+                            filer_id=filer_id,
+        )
 
     df = geopandas.GeoDataFrame(data)
-    df.to_file(filename='outfile.geojson', driver='GeoJSON')
+    df.to_file(filename=settings.outfile, driver='GeoJSON')
+
+def process_file(zip_file_dictionary, candidate_file,
+                 zip_codes_actual, data, logger, filer_id):
+    for zip_code in zip_codes_actual:
+        if zip_code not in zip_file_dictionary:
+            # This is a major problem because it means
+            # that the US thinks the zip code doesn't exist.
+            logger.info(event='invalid zip code',
+                        zip_code=zip_code,
+                        zip_class=type(zip_code),
+            )
+            continue
+
+        geometry = zip_file_dictionary[zip_code]['geometry']
+        total = candidate_file[
+            candidate_file['Entity_ZIP4'] == zip_code
+        ]['Amount'].sum()
+        data.append({'zip_code': zip_code,
+                     'geometry': geometry,
+                     'total_amount': total,
+                     'filer_ID': filer_id,
+        })
+    return data
+
     
 
 if __name__ == '__main__':
@@ -87,4 +101,7 @@ if __name__ == '__main__':
         raise FileNotFoundError(settings.zip_data)
     if not settings.input or not os.path.isdir(settings.input):
         raise NotADirectoryError(settings.input)
+    if os.path.isfile(settings.outfile):
+        raise FileExistsError(settings.outfile)
+
     run(settings=settings)
