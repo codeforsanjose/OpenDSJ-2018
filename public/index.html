@@ -1,10 +1,297 @@
 <html>
 <head>
-	<script src='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
-	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
+	<meta charset='utf-8' />
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=yes' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
 </head>
 <body>
+	<div class="landing__description">
+		<h3 class="landing_description_header">
+			Open Disclosure San Jose 2018
+		</h3>
+		<p class="landing_description_paragraph">
+			Learn about campaign contributions to the San Jose District 9 City Council candidates.
+			The app displays a heat map that visualizes the source of contributions—are 
+			candidates getting their donations from local or external donors?
+		</p>
+		</div>		
+			<div id="thumbnails" class="clearfix">
+				<div class="container">
+				<p class="instructions">Click on a candidate to see their financial information. </p>
+			<ul>
+				<li id="ng1">
+					<div>
+				<img src="images/ng.jpg" />
+						<p class="name">Shay Franco-Clausen</p>
+					</div>
+				</li>
+				<li id="cor1">
+					<div>
+						<img src="images/cor.jpg" />
+						<p class="name">Pam Foley</pclass>
+					</div>
+				</li>
+				<li id="lic1">
+					<div>
+						<img src="images/lic.jpg" />
+						<p class="name">Kalen Gallagher</p>
+					</div>
+				</li>
+				<li id="oli1">
+					<div>
+						<img src="images/oli.jpg" />
+						<p class="name">Scott D. Nelson</p>
+					</div>
+				</li>
+				<li id="her1">
+					<div>
+						<img src="images/her.jpg" />
+						<p class="name">Sabuhi Siddique							</p>
+					</div>
+				</li>
+				<li id="new1">
+						<div>
+							<img src="images/her.jpg" />
+							<p class="name">Rosie Zepeda								</p>
+						</div>
+					</li>
+			</ul>
+				<div id="tables">
+					<!--Madison Nguyen-->
+					<table class="table-data" width="100%" border="0" cellspacing="0" cellpadding="0" id="ng3">
+						<tr>
+							<th scope="col">Total Raised</th>
+							<th scope="col">Number of Contributions</th>
+							<th scope="col">Percentage from Outside San Jose</th>
+						</tr>
+						<tr>
+							<td>$473,498</td>
+							<td>1,712</td>
+							<td>21%</td>
+						</tr>
+					</table>
+					<!--Dan Cortese-->
+					<table class="table-data" width="100%" border="0" cellspacing="0" cellpadding="0" id="cor3">
+						<tr>
+							<th scope="col">Total Raised</th>
+							<th scope="col">Number of Contributions</th>
+							<th scope="col">Percentage from Outside San Jose</th>
+						</tr>
+						<tr>
+							<td>$930,001</td>
+							<td>3,183</td>
+							<td>48%</td>
+						</tr>
+					</table>
+					<!--Sam Liccardo-->
+					<table class="table-data" width="100%" border="0" cellspacing="0" cellpadding="0" id="lic3">
+						<tr>
+							<th scope="col">Total Raised</th>
+							<th scope="col">Number of Contributions</th>
+							<th scope="col">Percentage from Outside San Jose</th>
+							
+						</tr>
+						<tr>
+							<td>$1,244,850</td>
+							<td>3,168</td>
+							<td>55%</td>
+						</tr>
+					</table>
+					<!--Oliviero-->
+					<table class="table-data" width="100%" border="0" cellspacing="0" cellpadding="0" id="oli3">
+						<tr>
+							<th scope="col">Total Raised</th>
+							<th scope="col">Number of Contributions</th>
+							<th scope="col">Percentage from Outside San Jose</th>
+						</tr>
+						<tr>
+							<td>$160,768</td>
+							<td>381</td>
+							<td>29%</td>
+						</tr>
+					</table>
+					<!--Herrera-->
+					<table class="table-data" width="100%" border="0" cellspacing="0" cellpadding="0" id="her3">
+						<tr>
+							<th scope="col">Total Raised</th>
+							<th scope="col">Number of Contributions</th>
+							<th scope="col">Percentage from Outside San Jose</th>
+						</tr>
+						<tr>
+							<td>$114,709</td>
+							<td>179</td>
+							<td>46%</td>
+						</tr>
+					</table>
+				</div>
+				 <p class="disclaimer">*All information subject to change until final counts have been made. </p>
+				</div>
+			</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			<div id="slides">
+			<ul class="container">
+				<li id="ng">
+					<iframe width='97%' height='520' frameborder='0' id="ng2" src='//vivek2.cartodb.com/viz/11168fd8-eb8b-11e3-8742-0e10bcd91c2b/embed_map?title=true&description=true&search=false&shareable=true&cartodb_logo=true&layer_selector=false&legends=true&scrollwheel=true&fullscreen=true&sublayer_options=1&sql=&sw_lat=36.86863488530103&sw_lon=-122.904052734375&ne_lat=37.75551557687061&ne_lon=-120.88256835937499' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+					</li>
+				<li id="cor">
+					<iframe width='97%' height='520' frameborder='0' id="cor2" src='//vivek.cartodb.com/viz/f16b9000-ebb4-11e3-8ab5-0edbca4b5057/embed_map?title=true&description=true&search=false&shareable=true&cartodb_logo=true&layer_selector=false&legends=true&scrollwheel=true&fullscreen=true&sublayer_options=1&sql=&sw_lat=36.94330661415311&sw_lon=-123.11553955078125&ne_lat=37.84232584933158&ne_lon=-120.59417724609375' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+				</li>
+				<li id="lic">
+					<iframe width='97%' height='520' frameborder='0' id="lic2" src='//vivek3.cartodb.com/viz/3127c284-ebb7-11e3-bb9b-0e73339ffa50/embed_map?title=true&description=true&search=false&shareable=true&cartodb_logo=true&layer_selector=false&legends=true&scrollwheel=true&fullscreen=true&sublayer_options=1&sql=&sw_lat=36.83566824724438&sw_lon=-122.86010742187499&ne_lat=37.71641767847623&ne_lon=-120.7342529296875' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+				</li>
+				<li id="oli">
+					<iframe width='97%' height='520' frameborder='0' id="oli2" src='//vivek4.cartodb.com/viz/a1c12b42-ebb8-11e3-8ccb-0e230854a1cb/embed_map?title=true&description=true&search=false&shareable=true&cartodb_logo=true&layer_selector=false&legends=true&scrollwheel=true&fullscreen=true&sublayer_options=1&sql=&sw_lat=36.81368259124586&sw_lon=-122.84362792968749&ne_lat=37.67729913640427&ne_lon=-120.7177734375' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+				</li>
+				<li id="her">
+					<iframe width='97%' height='520' frameborder='0' id="her2" src='//vivek2.cartodb.com/viz/df91c6c6-eb9e-11e3-96ce-0e73339ffa50/embed_map?title=true&description=true&search=false&shareable=true&cartodb_logo=true&layer_selector=false&legends=true&scrollwheel=true&fullscreen=true&sublayer_options=1&sql=&sw_lat=36.84226271217679&sw_lon=-123.00567626953125&ne_lat=37.70555348721583&ne_lon=-120.84136962890625' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+				</li>
+		
+			</ul>   
+			</div>
+			
+		
 	<div id='map' style='width: 100%; height: 400px;'></div>
+
+	<script>
+			mapboxgl.accessToken = '<your access token here>';
+			var map = new mapboxgl.Map({
+				container: 'map',
+				style: 'mapbox://styles/mapbox/dark-v9',
+				center: [-120, 50],
+				zoom: 2
+			});
+			
+			map.on('load', function() {
+				// Add a geojson point source.
+				// Heatmap layers also work with a vector tile source.
+				map.addSource('earthquakes', {
+					"type": "geojson",
+					"data": "https://www.mapbox.com/mapbox-gl-js/assets/earthquakes.geojson"
+				});
+			
+				map.addLayer({
+					"id": "earthquakes-heat",
+					"type": "heatmap",
+					"source": "earthquakes",
+					"maxzoom": 9,
+					"paint": {
+						// Increase the heatmap weight based on frequency and property magnitude
+						"heatmap-weight": [
+							"interpolate",
+							["linear"],
+							["get", "mag"],
+							0, 0,
+							6, 1
+						],
+						// Increase the heatmap color weight weight by zoom level
+						// heatmap-intensity is a multiplier on top of heatmap-weight
+						"heatmap-intensity": [
+							"interpolate",
+							["linear"],
+							["zoom"],
+							0, 1,
+							9, 3
+						],
+						// Color ramp for heatmap.  Domain is 0 (low) to 1 (high).
+						// Begin color ramp at 0-stop with a 0-transparancy color
+						// to create a blur-like effect.
+						"heatmap-color": [
+							"interpolate",
+							["linear"],
+							["heatmap-density"],
+							0, "rgba(33,102,172,0)",
+							0.2, "rgb(103,169,207)",
+							0.4, "rgb(209,229,240)",
+							0.6, "rgb(253,219,199)",
+							0.8, "rgb(239,138,98)",
+							1, "rgb(178,24,43)"
+						],
+						// Adjust the heatmap radius by zoom level
+						"heatmap-radius": [
+							"interpolate",
+							["linear"],
+							["zoom"],
+							0, 2,
+							9, 20
+						],
+						// Transition from heatmap to circle layer by zoom level
+						"heatmap-opacity": [
+							"interpolate",
+							["linear"],
+							["zoom"],
+							7, 1,
+							9, 0
+						],
+					}
+				}, 'waterway-label');
+			
+				map.addLayer({
+					"id": "earthquakes-point",
+					"type": "circle",
+					"source": "earthquakes",
+					"minzoom": 7,
+					"paint": {
+						// Size circle radius by earthquake magnitude and zoom level
+						"circle-radius": [
+							"interpolate",
+							["linear"],
+							["zoom"],
+							7, [
+								"interpolate",
+								["linear"],
+								["get", "mag"],
+								1, 1,
+								6, 4
+							],
+							16, [
+								"interpolate",
+								["linear"],
+								["get", "mag"],
+								1, 5,
+								6, 50
+							]
+						],
+						// Color circle by earthquake magnitude
+						"circle-color": [
+							"interpolate",
+							["linear"],
+							["get", "mag"],
+							1, "rgba(33,102,172,0)",
+							2, "rgb(103,169,207)",
+							3, "rgb(209,229,240)",
+							4, "rgb(253,219,199)",
+							5, "rgb(239,138,98)",
+							6, "rgb(178,24,43)"
+						],
+						"circle-stroke-color": "white",
+						"circle-stroke-width": 1,
+						// Transition from heatmap to circle layer by zoom level
+						"circle-opacity": [
+							"interpolate",
+							["linear"],
+							["zoom"],
+							7, 0,
+							8, 1
+						]
+					}
+				}, 'waterway-label');
+			});
+			</script>
 
 	<script src="./app.js"></script>
 </body>
