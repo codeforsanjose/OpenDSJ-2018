@@ -4,6 +4,11 @@ from sys import argv
 from os.path import exists
 import simplejson as json 
 
+# To run the JSON --> GeoJSON converter, run the script in the command-line using 
+
+#     $ python json-to-geojson.py input_file.json output_file.json
+
+
 script, in_file, out_file = argv
 
 data = json.load(open(in_file))
