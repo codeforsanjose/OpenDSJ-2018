@@ -1,0 +1,8 @@
+# Generated Files
+./react-frontend/public/bundle.js
+
+# Jetbrains - WebStorm IDE files
+.idea
+
+# Node JS
+node_modules
