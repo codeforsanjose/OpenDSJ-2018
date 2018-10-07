@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { getFetchRequest, postFetchWithOptions } from '../../services/APIServices';
+import Divisions from './Divisions';
 
 class LocalOfficialsOfficesLookup extends Component {
     constructor (props) {
@@ -15,7 +16,10 @@ class LocalOfficialsOfficesLookup extends Component {
         const address = event.target.value
         if (this.state.address !== address) {
             this.setState({
-                address: address 
+                address: address,
+                divisions: [],
+                offices: [],
+                officials: [],
             })
         }
     }
@@ -31,6 +35,24 @@ class LocalOfficialsOfficesLookup extends Component {
         }
         postFetchWithOptions('api/addressLookup', {}, addressData).then(response => {
             console.log('local officials component lookup address response', response)
+
+            const divisionList =  Object.keys(response.divisions).map( key => {
+                return {
+                    ...response.divisions[key],
+                    divisionId: key
+                }
+            })
+            .sort( (divisionOne, divisionTwo) => {
+                return divisionTwo.divisionId.length - divisionOne.divisionId.length
+            })
+
+            this.setState(previousState => {
+                return {
+                    divisions: divisionList,
+                    offices: response.offices,
+                    officials: response.officials,
+                }
+            })
         })
     }
     render () {
@@ -44,6 +66,7 @@ class LocalOfficialsOfficesLookup extends Component {
                         <input 
                             type='text' 
                             placeholder='Address'
+                            value={ this.state.address }
                             onChange={ this.handleAddress }
                             onKeyPress={ this.handleKeyPress }
                         />
@@ -54,7 +77,10 @@ class LocalOfficialsOfficesLookup extends Component {
                         </button>
                     </div>
                     <div>
-                        display results
+                        <Divisions allDivisions={ this.state.divisions }
+                            offices={ this.state.offices }
+                            officials={ this.state.officials }
+                        />
                     </div>
                 </div>
             </div>
