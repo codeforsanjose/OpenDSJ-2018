@@ -9,7 +9,6 @@ class App extends Component {
         return (
             <div className='main'>
                 Hello World!
-                <LocalVoteMattersComponent />
             </div>
         );
     }
