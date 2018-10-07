@@ -6,7 +6,7 @@ const path = require('path'),
     };
 
 module.exports = {
-    mode: 'dev',
+    mode: 'development',
     entry: [
         // 'webpack-hot-middleware/client?reload=true', - have to add hot middleware to express server
         paths.entry
