@@ -3,6 +3,7 @@
 
 # Jetbrains - WebStorm IDE files
 .idea
+.DS_Store
 
 # Node JS
 node_modules
