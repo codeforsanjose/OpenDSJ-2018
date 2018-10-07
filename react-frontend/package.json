@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/codeforsanjose/OpenDSJ-2018#readme",
   "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
