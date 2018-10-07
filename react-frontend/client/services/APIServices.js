@@ -1,6 +1,6 @@
-import fetch from 'fetch'
 
-const baseURL = 'localhost:8080/'
+
+const baseURL = 'http://localhost:8080/'
 const getFetchRequest = (url) => {
     const fullURL = baseURL + url;
     return fetch(fullURL)
@@ -11,13 +11,20 @@ const getFetchRequest = (url) => {
 
 const postFetchWithOptions = (url, options = {}, data = {}) => {
     const fullURL = baseURL + url;
+    console.log('jmmmm here data', JSON.stringify(data))
     return fetch(fullURL, {
         method: 'POST',
         ...options,
+        headers: {
+            'Accept': 'application/json, text/plain, */*',
+            'Content-Type': 'application/json',
+            //"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+            ...options.headers
+        },
         body: JSON.stringify(data),
     })
     .then(response => {
-        response.json()
+        return response.json()
     });
 }
 

@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
+import { getFetchRequest, postFetchWithOptions } from '../../services/APIServices';
 
 class LocalOfficialsOfficesLookup extends Component {
+    constructor (props) {
+        super(props);
+        this.props = props;
+        this.state = {
+            address: '1184 normandy drive campbell ca 95008'
+        }
+
+    }
     handleAddress(event) {
         event.preventDefault()
         const address = event.target.value
@@ -17,7 +26,12 @@ class LocalOfficialsOfficesLookup extends Component {
     }
 
     lookupAddress = () => {
-
+        const addressData = {
+            address: this.state.address
+        }
+        postFetchWithOptions('api/addressLookup', {}, addressData).then(response => {
+            console.log('local officials component lookup address response', response)
+        })
     }
     render () {
         return (
