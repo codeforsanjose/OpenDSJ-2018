@@ -13,7 +13,7 @@ class App extends Component {
     constructor(props) {
         super(props);
 
-        // BEGIN: Select first campaign in list by default
+        // BEGIN: Select first campaign/election in list by default
         let selection = null;
         let selectionType = null;
 
@@ -30,8 +30,7 @@ class App extends Component {
             selection,
             selectionType
         };
-        // END: Select first campaign in list by default
-
+        // END: Select first campaign/election in list by default
 
         this.switchSelection = this.switchSelection.bind(this);
     }
@@ -50,7 +49,7 @@ class App extends Component {
 
         const {
             selection,
-            selectionType
+            selectionType       // May or may not use selectionType in the future
         } = this.state;
 
         return (

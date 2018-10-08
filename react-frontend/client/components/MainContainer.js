@@ -8,6 +8,7 @@ export default class MainContainer extends Component {
         this.renderSelectedItem = this.renderSelectedItem.bind(this);
     }
 
+    // TODO add switch statement based on selection.type to use different CampaignTypes/ElectionTypes
     renderSelectedItem() {
         return (
             <div>
