@@ -13,38 +13,57 @@ class App extends Component {
     constructor(props) {
         super(props);
 
+        // BEGIN: Select first campaign in list by default
+        let selection = null;
+        let selectionType = null;
+
+        if (props.campaigns && props.campaigns.length > 0) {
+            selection = props.campaigns[0];
+            selectionType = 'campaigns';
+        }
+        else if (props.elections && props.elections.length > 0) {
+            selection = props.elections[0];
+            selectionType = 'elections';
+        }
+
         this.state = {
-            selectionId: props.items[0].id
+            selection,
+            selectionType
         };
+        // END: Select first campaign in list by default
+
 
         this.switchSelection = this.switchSelection.bind(this);
     }
 
-    switchSelection(id) {
+    switchSelection(selection) {
         this.setState({
-            selectionId: id
+            selection
         });
     }
 
     render() {
         const {
-            items
+            campaigns,
+            elections
         } = this.props;
 
         const {
-            selectionId
+            selection,
+            selectionType
         } = this.state;
 
         return (
             <div className='app'>
                 <Navigation
-                    items={ items }
-                    selectionId={ selectionId }
+                    campaigns={ campaigns }
+                    elections={ elections }
+                    selectionId={ selection.id }
                     handleSelect={ this.switchSelection }
                 />
 
                 <MainContainer
-                    selection={ items[selectionId] }
+                    selection={ selection }
                 />
             </div>
         );
@@ -54,5 +73,6 @@ class App extends Component {
 export default withRouter(connect(mapStateToProps)(App));
 
 App.propTypes = {
-    items: PropTypes.array.isRequired
+    campaigns: PropTypes.array.isRequired,
+    elections: PropTypes.array.isRequired,
 };

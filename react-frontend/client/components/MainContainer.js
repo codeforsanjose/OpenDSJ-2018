@@ -11,7 +11,7 @@ export default class MainContainer extends Component {
     renderSelectedItem() {
         return (
             <div>
-                YOUR SELECTION IS { this.props.selection.id }
+                YOUR SELECTION IS { this.props.selection.title }
             </div>
         );
     }
