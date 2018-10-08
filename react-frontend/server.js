@@ -25,7 +25,7 @@ app.post('/api/addressLookup', (req, res) => {
 
 
 const getRepresentativeInfo = (address) => {
-    const API_KEY = 'AIzaSyCWhwRupMs7IeE4IrGEgHtT0Nt-IGZnP9E';
+    const API_KEY = '';
     const endURL = '&key='+ API_KEY;
     const formattedAddress = address.split(' ').join('+');
     const baseRepURL = `https://www.googleapis.com/civicinfo/v2/representatives?address=${formattedAddress}${endURL}`;
@@ -36,7 +36,7 @@ const getRepresentativeInfo = (address) => {
 
 }
 const getElectionsInfo = () => {
-    const API_KEY = 'AIzaSyCWhwRupMs7IeE4IrGEgHtT0Nt-IGZnP9E';
+    const API_KEY = '';
     const endURL = '&key='+ API_KEY;
     const baseElectionsURL = `https://www.googleapis.com/civicinfo/v2/elections?alt=json&prettyPrint=true${endURL}`;
     return fetchService.fetchRequest(baseElectionsURL)
