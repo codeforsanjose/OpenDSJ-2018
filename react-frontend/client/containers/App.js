@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import { mapStateToProps } from '../redux/selectors/App';
-import Navigation from './Navigation';
-import MainContainer from './MainContainer';
+import Navigation from '../components/Navigation';
+import MainContainer from '../components/MainContainer';
 
 
 import '../styles/app.scss';
