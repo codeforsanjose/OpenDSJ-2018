@@ -3,11 +3,12 @@ import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import '../styles/app.scss';
 import { mapStateToProps } from '../redux/selectors/App';
-import Navigation from './Navigation';
-import MainContainer from './MainContainer';
+import Navigation from '../compositions/Navigation/Navigation';
+import MainContainer from './MainContainer/MainContainer';
 
+
+import '../styles/app.scss';
 
 class App extends Component {
     constructor(props) {

@@ -4,5 +4,8 @@
 # Jetbrains - WebStorm IDE files
 .idea
 
+# MacOS
+.DS_Store
+
 # Node JS
 node_modules
