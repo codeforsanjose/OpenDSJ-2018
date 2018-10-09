@@ -1,0 +1,53 @@
+$green: #8D8741;
+$mint-green: #5CDB95;
+
+$teal-blue: #659D8B;
+
+$dark-red: EDF5E1;
+
+$light-brown: #DAAD86;
+$medium-brown: #BC986A;
+$dark-brown: #7E685A;
+
+$light-beige: #FBEEC1;
+
+$dark-mauve: #907163;
+
+$faded-black: #1A1A1D;
+
+$light-grey: #4E4E50;
+
+body {
+  background: whitesmoke;
+}
+
+.app {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  .navigation {
+    padding: 10px;
+    flex-grow: 1;
+    width: 30%;
+
+    .h2 {
+      text-align: center;
+
+    }
+
+    .navigation-item {
+
+    }
+
+    .selected-item {
+      background: $mint-green;
+    }
+  }
+
+  .main-container {
+    flex-grow: 2;
+    padding: 10px;
+    width: 60%;
+  }
+}
