@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-export default class MainContainer extends Component {
+export default class DetailViewContainer extends Component {
     constructor(props) {
         super(props);
 
@@ -12,7 +12,7 @@ export default class MainContainer extends Component {
     renderSelectedItem() {
         return (
             <div>
-                YOUR SELECTION IS { this.props.selection.title }
+                YOUR SELECTION ID IS { this.props.selectionId }
             </div>
         );
     }
@@ -26,6 +26,6 @@ export default class MainContainer extends Component {
     }
 }
 
-MainContainer.propTypes = {
-    selection: PropTypes.object.isRequired
+DetailViewContainer.propTypes = {
+    selectionId: PropTypes.number
 };

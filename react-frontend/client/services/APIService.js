@@ -2,9 +2,9 @@ import fetch from 'fetch'
 
 const getFetchRequest = (url) => {
     return fetch(url)
-    .then(function(response) {
-        return response.json();
-    });
+        .then(function(response) {
+            return response.json();
+        });
 }
 
 const postFetchWithOptions = (url, options = {}, data = {}) => {
@@ -13,9 +13,9 @@ const postFetchWithOptions = (url, options = {}, data = {}) => {
         ...options,
         body: JSON.stringify(data),
     })
-    .then(response => {
-        response.json()
-    });
+        .then(response => {
+            response.json()
+        });
 }
 
 
