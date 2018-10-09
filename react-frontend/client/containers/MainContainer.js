@@ -5,8 +5,6 @@ import PropTypes from 'prop-types';
 import { mapStateToProps } from '../selectors/containers/MainContainer';
 import Navigation from '../compositions/Navigation';
 import DetailViewContainer from './DetailViewContainer';
-
-
 import '../styles/app.scss';
 
 class MainContainer extends Component {

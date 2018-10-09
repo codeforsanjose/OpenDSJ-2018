@@ -18,4 +18,3 @@ app.all('/*', (req, res) => {
 app.listen(8080, () => {
     console.log('Express server is up on port ' + 8080);
 });
-
