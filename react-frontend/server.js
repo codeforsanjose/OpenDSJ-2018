@@ -48,4 +48,3 @@ const getElectionsInfo = () => {
 app.listen(8080, () => {
     console.log('Express server is up on port ' + 8080);
 });
-

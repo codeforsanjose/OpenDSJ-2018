@@ -3,15 +3,14 @@
 const baseURL = 'http://localhost:8080/'
 const getFetchRequest = (url) => {
     const fullURL = baseURL + url;
-    return fetch(fullURL)
-    .then(function(response) {
-        return response.json();
-    });
+    return fetch(url)
+        .then(function(response) {
+            return response.json();
+        });
 }
 
 const postFetchWithOptions = (url, options = {}, data = {}) => {
     const fullURL = baseURL + url;
-    console.log('jmmmm here data', JSON.stringify(data))
     return fetch(fullURL, {
         method: 'POST',
         ...options,
