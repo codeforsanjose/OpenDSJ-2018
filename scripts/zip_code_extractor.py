@@ -39,6 +39,8 @@ def run(settings):
         # Tran_ID: Possibly unique ID for the individual transaction?
         # Amount: Looks like hte actual amount being paid.
         # Entity_ZIP4: Zip code?
+        if not os.path.splitext(csv_file)[1] == '.csv':
+            continue
         actual_path = os.path.join(settings.input, csv_file)
         candidate_file = pandas.read_csv(actual_path)
 
