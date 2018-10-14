@@ -1,0 +1,21 @@
+/**
+ * START
+ * Remove all user-agent styles added as defaults by browsers
+ */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Trebuchet MS", serif;
+}
+/**
+ * END
+ * Remove all user-agent styles added as defaults by browsers
+ */
+
+html, body{
+    height:100%;
+}
+
+#app-container {
+    height:100%;
+}

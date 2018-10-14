@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-export default class Navigation extends Component {
+export default class ItemNavigation extends Component {
     constructor(props) {
         super(props);
 
@@ -64,7 +64,7 @@ export default class Navigation extends Component {
     }
 }
 
-Navigation.propTypes = {
+ItemNavigation.propTypes = {
     navigationGroups: PropTypes.object,
     selectionId: PropTypes.number,
     handleSelect: PropTypes.func

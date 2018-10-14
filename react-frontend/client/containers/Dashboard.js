@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { mapStateToProps } from '../selectors/containers/MainContainer';
-import Navigation from '../compositions/Navigation';
+import { mapStateToProps } from '../selectors/containers/Dashboard';
+import ItemNavigation from '../compositions/\uF702ItemNavigation';
 import DetailViewContainer from './DetailViewContainer';
-import '../styles/app.scss';
+import '../styles/dasbhoard.scss';
 
-class MainContainer extends Component {
+class Dashboard extends Component {
     constructor(props) {
         super(props);
 
@@ -35,8 +35,8 @@ class MainContainer extends Component {
         const { selectionId } = this.state;
 
         return (
-            <div className='app'>
-                <Navigation
+            <div className='dashboard'>
+                <ItemNavigation
                     navigationGroups={ navigationGroups }
                     selectionId={ selectionId }
                     handleSelect={ this.switchSelection }
@@ -50,8 +50,8 @@ class MainContainer extends Component {
     }
 }
 
-export default connect(mapStateToProps)(MainContainer);
+export default connect(mapStateToProps)(Dashboard);
 
-MainContainer.propTypes = {
+Dashboard.propTypes = {
     navigationGroups: PropTypes.object
 };

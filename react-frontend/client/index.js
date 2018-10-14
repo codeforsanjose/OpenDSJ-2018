@@ -6,7 +6,9 @@ import { Provider } from 'react-redux';
 import { applyMiddleware, createStore } from 'redux';
 
 import reducers from './reducers';
-import App from './containers/MainContainer';
+import Dashboard from './containers/Dashboard';
+import Home from './containers/Home';
+import './styles/index.scss';
 
 const store = createStore(reducers, applyMiddleware(logger));
 
@@ -14,7 +16,8 @@ ReactDOM.render(
     <Provider store={ store }>
         <BrowserRouter>
             <Switch>
-                <Route path='/' component={ App }/>
+                <Route exact path='/' component={ Home }/>
+                <Route exact path='/dashboard' component={ Dashboard }/>
             </Switch>
         </BrowserRouter>
     </Provider>,

@@ -1,0 +1,14 @@
+@mixin center-horizontally {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin center-vertically {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+@mixin center {
+  @include center-horizontally;
+  @include center-vertically;
+}

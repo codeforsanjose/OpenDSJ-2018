@@ -1,5 +1,5 @@
 /**
- * Maps the Redux state to MainContainer.js component's props
+ * Maps the Redux state to Dashboard.js component's props
  * @param state
  * @returns {{}}
  */

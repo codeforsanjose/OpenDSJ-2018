@@ -1,0 +1,35 @@
+@import 'colors';
+@import 'mixins';
+
+.home {
+  background-color: $teal-blue;
+  height:100%;
+
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .title-container {
+
+    .title {
+      @include center;
+      padding: 100px 100px 0;
+      text-align: center;
+      color: $off-white-teal;
+    }
+
+    .subtitle {
+      @include center-horizontally;
+
+      p {
+        font-size: 18px;
+        color: $blue-black;
+        padding: 20px 200px;
+        text-align: justify;
+        line-height: 30px;
+      }
+    }
+  }
+}
