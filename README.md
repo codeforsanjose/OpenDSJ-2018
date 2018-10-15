@@ -8,10 +8,15 @@ We want to highlight the following with data visualizations or a dashboard:
 This information might help voters make more informed decisions.
 
 ## Tools
-- Node
+- Node.js
 - Express
-- React
+- [React](https://reactjs.org/)
 
+Before you run the development server, you will want to have the following installed:
+- [Node.js](https://nodejs.org/en/)
+- [Git for version control](https://git-scm.com/)
+- [npm - which should be installed with Node](https://www.npmjs.com/get-npm)
+ 
 ## How to run the development server
 1. yarn install or npm install
 2. Open a terminal and run yarn run server:dev
