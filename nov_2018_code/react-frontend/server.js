@@ -12,9 +12,9 @@ app.use(express.static(path.resolve('public')));
 app.set('view engine', 'ejs');
 
 app.all('/*', (req, res) => {
-    res.render('index', {});
+	res.render('index', {});
 });
 
 app.listen(8080, () => {
-    console.log('Express server is up on port ' + 8080);
+	console.log('Express server is up on port ' + 8080);
 });
