@@ -1,0 +1,27 @@
+sudo: false
+
+language: node_js
+
+node_js:
+  - "8.3.0"
+
+cache:cd .
+  directories:
+    - node_modules
+
+install:
+  - cd nov_2018_code
+  - cd react-frontend
+  - npm install
+
+script:
+  - cd nov_2018_code 
+  - cd react-frontend 
+  - npm install
+  - npm run server:dev
+  - npm run build:dev
+
+branches:
+  only:
+  - gh-pages
+  - /.*/
