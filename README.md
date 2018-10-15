@@ -1,4 +1,5 @@
 # Open Disclosure San José
+
 Inform voters about the 2018 General Election San José, California and Santa Clara County local candidates' and measures' campaign finance data. 
 
 We want to highlight the following with data visualizations or a dashboard: 
@@ -18,10 +19,13 @@ Before you run the development server, you will want to have the following insta
 - [npm - which should be installed with Node](https://www.npmjs.com/get-npm)
  
 ## How to run the development server
-1. yarn install or npm install
-2. Open a terminal and run yarn run server:dev
-3. Open another terminal and run yarn run build:dev
-4. Open localhost:8080 in a browser
+1. Git clone the repository and cd the repository
+2. ```cd nov_2018_code``` 
+3. ```cd react-frontend```
+4. ```yarn install``` or ```npm install```
+5. Open a terminal and run ```yarn run server:dev``` or ```npm run server:dev```
+6. Open another terminal and run ```yarn run build:dev``` or ```npm run server:dev```
+7. Open ```localhost:8080``` in a browser
 
 ## How to Contribute
 Please assign yourself one of "Find data" GitHub issues here:
