@@ -9,3 +9,8 @@ nov_2018_code/react-frontend/.idea
 
 # Node JS
 nov_2018_code/react-frontend/node_modules
+
+# misc
+*.swp
+nov_2018_code/react-frontend/npm-debug.log*
+nov_2018_code/react-frontend/yarn-debug.log*
