@@ -2,30 +2,30 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 export default class DetailViewContainer extends Component {
-    constructor(props) {
-        super(props);
+	constructor(props) {
+		super(props);
 
-        this.renderSelectedItem = this.renderSelectedItem.bind(this);
-    }
+		this.renderSelectedItem = this.renderSelectedItem.bind(this);
+	}
 
-    // TODO add switch statement based on selection.type to use different CampaignTypes/ElectionTypes
-    renderSelectedItem() {
-        return (
-            <div>
+	// TODO add switch statement based on selection.type to use different CampaignTypes/ElectionTypes
+	renderSelectedItem() {
+		return (
+			<div>
                 YOUR SELECTION ID IS { this.props.selectionId }
-            </div>
-        );
-    }
+			</div>
+		);
+	}
 
-    render() {
-        return (
-            <div className='main-container'>
-                { this.renderSelectedItem() }
-            </div>
-        );
-    }
+	render() {
+		return (
+			<div className='main-container'>
+				{ this.renderSelectedItem() }
+			</div>
+		);
+	}
 }
 
 DetailViewContainer.propTypes = {
-    selectionId: PropTypes.number
+	selectionId: PropTypes.number
 };
