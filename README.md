@@ -1,5 +1,6 @@
 # Open Disclosure San José
 [![Build Status](https://travis-ci.org/codeforsanjose/OpenDSJ-2018.svg?branch=develop)](https://travis-ci.org/codeforsanjose/OpenDSJ-2018)
+[![Coverage Status](https://coveralls.io/repos/github/codeforsanjose/OpenDSJ-2018/badge.svg?branch=develop)](https://coveralls.io/github/codeforsanjose/OpenDSJ-2018?branch=develop)
 
 Inform voters about the 2018 General Election San José, California and Santa Clara County local candidates' and measures' campaign finance data. 
 
