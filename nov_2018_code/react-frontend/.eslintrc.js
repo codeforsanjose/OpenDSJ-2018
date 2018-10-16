@@ -19,16 +19,6 @@ module.exports = {
         }
     },
     "rules": {
-        "no-console": [
-            "error",
-            {
-              allow: [
-                "log",
-                "warn",
-                "error"
-              ]
-            }
-        ],
         "indent": [
             "error",
             "tab"
