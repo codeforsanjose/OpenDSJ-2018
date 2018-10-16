@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getFetchRequest, postFetchWithOptions } from '../../services/APIServices';
+import { getFetchRequest, postFetchWithOptions } from '../../services/APIService';
 import Divisions from './Divisions';
 
 class LocalOfficialsOfficesLookup extends Component {
@@ -34,7 +34,7 @@ class LocalOfficialsOfficesLookup extends Component {
             address: this.state.address
         }
         postFetchWithOptions('api/addressLookup', {}, addressData).then(response => {
-            console.log('local officials component lookup address response', response)
+            console.log('local officials component lookup address response', JSON.stringify(response) )
 
             const divisionList =  Object.keys(response.divisions).map( key => {
                 return {

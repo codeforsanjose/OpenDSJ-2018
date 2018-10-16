@@ -9,3 +9,6 @@ react-frontend/public/bundle.js
 
 # Node JS
 node_modules
+
+# project directory
+react-frontend/config/secrets.json

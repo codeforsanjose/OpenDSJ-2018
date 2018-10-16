@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { mapStateToProps } from '../selectors/containers/MainContainer';
 import Navigation from '../compositions/Navigation';
 import DetailViewContainer from './DetailViewContainer';
+import LocalOfficialsOfficesLookup from '../compositions/LocalOfficialsOfficesLookup/LocalOfficalsOfficesLookup';
 import '../styles/app.scss';
 
 class MainContainer extends Component {
@@ -33,7 +34,7 @@ class MainContainer extends Component {
     render() {
         const { navigationGroups } = this.props;
         const { selectionId } = this.state;
-
+        console.log('what be navigationGroups', navigationGroups)
         return (
             <div className='app'>
                 <Navigation
@@ -45,6 +46,8 @@ class MainContainer extends Component {
                 <DetailViewContainer
                     selectionId={ selectionId }
                 />
+                <hr />
+                <LocalOfficialsOfficesLookup />
             </div>
         );
     }

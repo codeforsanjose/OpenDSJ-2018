@@ -4,7 +4,8 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const fetchService = require('./services/FetchService');
-
+const secrets = require('./config/secrets.json');
+const API_KEY = secrets.localVoteAPIKey;
 app.use(bodyParser.json()); //
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(logger('dev')); // TODO fix for NODE_ENV
@@ -25,7 +26,6 @@ app.post('/api/addressLookup', (req, res) => {
 
 
 const getRepresentativeInfo = (address) => {
-    const API_KEY = '';
     const endURL = '&key='+ API_KEY;
     const formattedAddress = address.split(' ').join('+');
     const baseRepURL = `https://www.googleapis.com/civicinfo/v2/representatives?address=${formattedAddress}${endURL}`;
@@ -36,7 +36,6 @@ const getRepresentativeInfo = (address) => {
 
 }
 const getElectionsInfo = () => {
-    const API_KEY = '';
     const endURL = '&key='+ API_KEY;
     const baseElectionsURL = `https://www.googleapis.com/civicinfo/v2/elections?alt=json&prettyPrint=true${endURL}`;
     return fetchService.fetchRequest(baseElectionsURL)
