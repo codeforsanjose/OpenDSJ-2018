@@ -10,14 +10,10 @@ cache:
     - nov_2018_code/react-frontend/node_modules
 
 install:
-  - cd nov_2018_code
-  - cd react-frontend
+  - cd nov_2018_code && cd react-frontend
   - npm install
 
 script:
-  - cd nov_2018_code 
-  - cd react-frontend 
-  - npm install
   - npm run server:dev
   - npm run build:dev
 
