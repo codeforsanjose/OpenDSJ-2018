@@ -11,9 +11,14 @@ We want to highlight the following with data visualizations or a dashboard:
 This information might help voters make more informed decisions.
 
 ## Tools
-- Node.js
+- Node.js v8.30+
 - Express
 - [React](https://reactjs.org/)
+- npm 
+- yarn
+- [Anaconda](https://www.anaconda.com) or [Miniconda](https://conda.io/miniconda.html)
+- [Panda](https://pandas.pydata.org/)
+- Python v2.7+
 
 Before you run the development server, you will want to have the following installed:
 - [Node.js](https://nodejs.org/en/)
@@ -28,6 +33,24 @@ Before you run the development server, you will want to have the following insta
 5. Open a terminal and run ```yarn run server:dev``` or ```npm run server:dev```
 6. Open another terminal and run ```yarn run build:dev``` or ```npm run server:dev```
 7. Open ```localhost:8080``` in a browser
+
+## How to run the python scripts in ```data``` folder 
+Before you run the scripts:
+1. Install Python
+2. Install Anaconda or Miniconda
+3. If you use Anaconda, ```conda install -c anaconda pandas```
+4. If you use Miniconda, view [instructions here](https://pandas.pydata.org/pandas-docs/stable/install.html)
+must have Python installed, and either Anaconda or Miniconda. 
+
+After you install the necessary libraries: 
+1. ```cd data/scripts```
+2. ```python``` one of the files in that folder
+3. If running the convert script, ```cd ../json-11-6-2018-General-Election-SJC-candidates/" to find the output file
+4. If running the combine script, ```cd ../combined-data-11-6-2018-General-Election-SJC-candidates/" to find the output file
+
+## Resources
+Go to ```cd data/resources```
+Use the key for questions about the data headers. The source of this key is the [Santa Clara County Public Portal for Campaign Finance Disclosure](https://public.netfile.com/pub2/?aid=SCC&AspxAutoDetectCookieSupport=1). Some of the header information in the key should apply to both SJC and SCC data for Form 460 files (the files that detail contributions, loans and expenses).
 
 ## How to Contribute
 Please assign yourself one of "Find data" GitHub issues here:
