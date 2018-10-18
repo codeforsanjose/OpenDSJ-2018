@@ -23,4 +23,4 @@ frames[1:] = [df[1:] for df in frames[1:]]
 combined = pd.concat(frames)
 
 # write it out
-combined.to_excel("combined-ME-460.xls", header=False, index=False)
+combined.to_excel("../combined-data-11-6-2018-General-Election-SJC-candidates/combined-ME-460.xls", header=False, index=False)
