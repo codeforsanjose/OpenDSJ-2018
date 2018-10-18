@@ -15,8 +15,6 @@ install:
 
 script:
   - npm run lint
-  - npm run server:dev
-  - npm run build:dev
 
 branches:
   only:
