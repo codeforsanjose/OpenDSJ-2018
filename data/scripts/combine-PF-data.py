@@ -3,11 +3,12 @@ import pandas as pd
 # filenames
 file_names = [
   "../11:6:2018-General-Election-SJC-candidate-campaign-data/SJC_D9_PamFoley/PF_460 Recipient Committee Campaign Statement 7:31:2018 6:4:2018 - 6:30:2018.xls",
-  "../11:6:2018-General-Election-SJC-candidate-campaign-data/SJC_D9_PamFoley/PF_460 Recipient Committee Campaign Statement 9:27:2018 7:1:2018 - 9:22:2018.xls",
   "../11:6:2018-General-Election-SJC-candidate-campaign-data/SJC_D9_PamFoley/PF_460 Recipient Committee Campaign Statement 1:31:2018 1:1:2017 - 12:31:2017.xls",
   "../11:6:2018-General-Election-SJC-candidate-campaign-data/SJC_D9_PamFoley/PF_460 Recipient Committee Campaign Statement 4:26:2018 1:1:2018 - 4:21:2018.xls",
   "../11:6:2018-General-Election-SJC-candidate-campaign-data/SJC_D9_PamFoley/PF_460 Recipient Committee Campaign Statement 5:24:2018 4:22:2018 - 5:19:2018.xls",
   "../11:6:2018-General-Election-SJC-candidate-campaign-data/SJC_D9_PamFoley/PF_460 Recipient Committee Campaign Statement 6:4:2018 5:20:2018 - 6:3:2018.xls",
+  "../11:6:2018-General-Election-SJC-candidate-campaign-data/SJC_D9_PamFoley/PamFoley-460RecipientCommitteeCampaignStatement-FilingDate-10:24:2018-FilingPeriod-9:23:2018-10:20:2018.xls",
+  "../11:6:2018-General-Election-SJC-candidate-campaign-data/SJC_D9_PamFoley/PamFoley-460-ARecipientCommitteeCampaignStatement-Amendment-FilingDate-10:31:2018-FilingPeriod-7:1:2018-9:22:2018.xls",
 ]
 
 # read the files

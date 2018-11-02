@@ -7,7 +7,8 @@ file_names = [
   "../11:6:2018-General-Election-SJC-candidate-campaign-data/SJC_D7_MayaEsparza/ME_460 Recipient Committee Campaign Statement 5:24:2018 4:22:2018 - 5:19:2018.xls", 
   "../11:6:2018-General-Election-SJC-candidate-campaign-data/SJC_D7_MayaEsparza/ME_460 Recipient Committee Campaign Statement 6:4:2018 5:20:2018 - 6:3:2018.xls", 
   "../11:6:2018-General-Election-SJC-candidate-campaign-data/SJC_D7_MayaEsparza/ME_460 Recipient Committee Campaign Statement 7:31:2018 6:4:2018 - 6:30:2018.xls", 
-  "../11:6:2018-General-Election-SJC-candidate-campaign-data/SJC_D7_MayaEsparza/ME_460 Recipient Committee Campaign Statement 9:27:2018 7:1:2018 - 9:22:2018.xls"
+  "../11:6:2018-General-Election-SJC-candidate-campaign-data/SJC_D7_MayaEsparza/ME_460 Recipient Committee Campaign Statement 9:27:2018 7:1:2018 - 9:22:2018.xls",
+  "../11:6:2018-General-Election-SJC-candidate-campaign-data/SJC_D7_MayaEsparza/MayaEsparza-460RecipientCommitteeCampaignStatement-FilingDate-10:25:2018-FilingPeriod-9:23:2018-10:20:2018.xls",
 ]
 
 # read the files
