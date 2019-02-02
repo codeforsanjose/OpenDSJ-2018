@@ -4,7 +4,7 @@ This directory contains python utilities. It uses a python virtual environment f
 
 ## Setting up a virtual environment
 
-### Mac and Unix
+### Instructions for Mac and Unix
 
 Go to the project's root directory:
 
@@ -25,4 +25,3 @@ Activate virtual environment:
 ## Unit tests
 
 Unit tests are in `utils/unittests/` directory. To run a test, activate the virtual environment, then run the test as a python script. As in `python <test_script>`
-
