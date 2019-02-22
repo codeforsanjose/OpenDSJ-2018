@@ -1,0 +1,42 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+exports.default = disbatch;
+
+var _batch = require('./batch');
+
+var _batch2 = _interopRequireDefault(_batch);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function disbatch(store) {
+  for (var _len = arguments.length, actions = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    actions[_key - 1] = arguments[_key];
+  }
+
+  if (actions && actions.length > 0) {
+    if (!store || typeof store !== 'function' && typeof store.dispatch !== 'function') {
+      throw new TypeError('disbatch must take either a valid Redux store or a dispatch function as first parameter');
+    }
+
+    if (typeof store.dispatch === 'function') {
+      store = store.dispatch;
+    }
+
+    // store is actually the dispatch function here
+    return store(_batch2.default.apply(undefined, actions));
+  } else {
+    if (!store || typeof store.dispatch !== 'function') {
+      throw new TypeError('disbatch must take a valid Redux store with a dispatch function as first parameter');
+    }
+
+    return _extends(store, {
+      disbatch: disbatch.bind(undefined, store)
+    });
+  }
+}
