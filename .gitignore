@@ -6,6 +6,12 @@ nov_2018_code/react-frontend/.idea
 
 # MacOS
 .DS_Store
+data/.DS_Store
+data/11:6:2018-General-Election-SJC-candidate-campaign-data/.DS_Store
+data/11:6:2018-General-Election-SJC-candidate-campaign-data/SJC_D7_MayaEsparza/.DS_Store
+data/11:6:2018-General-Election-SJC-candidate-campaign-data/SJC_D7_TamNguyen/.DS_Store
+data/11:6:2018-General-Election-SJC-candidate-campaign-data/SJC_D9_KalenGallagher/.DS_Store
+data/11:6:2018-General-Election-SJC-candidate-campaign-data/SJC_D9_PamFoley/.DS_Store
 
 # Node JS
 nov_2018_code/react-frontend/node_modules
