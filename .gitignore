@@ -20,3 +20,7 @@ nov_2018_code/react-frontend/node_modules
 *.swp
 nov_2018_code/react-frontend/npm-debug.log*
 nov_2018_code/react-frontend/yarn-debug.log*
+
+node_modules/
+
+.idea
