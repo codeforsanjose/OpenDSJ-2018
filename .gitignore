@@ -21,6 +21,12 @@ nov_2018_code/react-frontend/node_modules
 nov_2018_code/react-frontend/npm-debug.log*
 nov_2018_code/react-frontend/yarn-debug.log*
 
-node_modules/
+# python virtual env
+utils/lib64
+utils/lib/
+utils/bin/
+utils/pyenv.cfg
+__pycache__/
 
+node_modules/
 .idea
