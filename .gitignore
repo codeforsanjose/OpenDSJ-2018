@@ -27,3 +27,6 @@ utils/lib/
 utils/bin/
 utils/pyenv.cfg
 __pycache__/
+
+node_modules/
+.idea
