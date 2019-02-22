@@ -18,9 +18,16 @@ react-frontend/node_modules
 
 # misc
 *.swp
+
 react-frontend/npm-debug.log*
 react-frontend/yarn-debug.log*
 
-node_modules
-.idea
+# python virtual env
+utils/lib64
+utils/lib/
+utils/bin/
+utils/pyenv.cfg
+__pycache__/
 
+node_modules/
+.idea
