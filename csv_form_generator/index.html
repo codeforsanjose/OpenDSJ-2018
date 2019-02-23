@@ -1,289 +1,220 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8">
+  <meta name="generator" content=
+  "HTML Tidy for Linux (vers 25 March 2009), see www.w3.org" />
+  <meta charset="UTF-8" />
+
   <title>Form 460 CSV Generator</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" 
-  rel="stylesheet">
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+  rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href=
+  "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  type="text/css" />
+  <link rel="stylesheet" href="styles.css" type="text/css" />
   <!-- TODO remove when done -->
-  <meta http-equiv="refresh" content="10" >
+  <!-- <meta http-equiv="refresh" content="10" > -->
 </head>
-<style>
-  .wrapper {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 7%;
-  }
-  .form {
-    max-width: 800px;
-    margin: 10% auto;
-  }
-  .page_title {
-    font-size: 2em;
-  }
-  .btn {
-    cursor: pointer;
-    position: relative;
-  }
-  .icon {
-    font-size: 1.2em;
-    color: #4ac918;
-    position: absolute;
-    right: 20%
-  }
-  .form_group {
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
-  .form_group.inline {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  .form_field {
-    margin: .4em;
-  }
-  .form_group_title {
-    margin-right: 2em;
-  }
-  input[type="radio"] {
-    margin-right: 4px;
-  }
-</style>
+
 <body>
+  <!-- TODO rename BEM classes -->
+
   <div class="wrapper">
-    <h1 class="page_title">California Form 460 CSV Generator</h1>
-    <form class="form">
-      <section class="form_section">
-        <div class="form_group inline">
-          <p class="form_group_title">
-            Period Covered
-          </p>
-          <p class="form_field">
-            <input type="text" value="" name="" id="" placeholder="From" />
-          </p>
-          <p class="form_field">
-            <input type="text" value="" name="" id="" placeholder="To" />
-          </p>
-        </div>
-      </section>
-      <section class="form_section">
-        <div class="form_group inline">
-          <p class="form_group_title">
-            Filing Date
-          </p>
-          <p class="form_field">
-            <input type="date" value="" name="" id="" />
-          </p>
-        </div>
-        <div class="form_group inline">
-          <p class="form_group_title">
-            Election Date
-          </p>
-          <p class="form_field">
-            <input type="date" value="" name="" id="" />
-          </p>
-        </div>
-      </section>
-      <section class="form_section">
-        <p class="section_title">Committee</p>
-        <div class="form_group inline">
-          <p class="form_field">
-            <input type="text" value="" name="Officeholder" id="" placeholder="Name" />
-          </p>
-          <p class="form_field">
-            <input type="text" value="" name="Officeholder" id="" placeholder="ID" />
-          </p>
-        </div>
-        <div class="form_group inline">
-          <p class="form_group_title">
-            Type
-          </p>
-          <p class="form_field">
-            <input type="radio" value="officeholder" name="Officeholder" id=""/>Office Holder
-          </p>
-          <p class="form_field">
-            <input type="radio" value="general_purpose_committee" name="" id=""/>General Purpose Committee
-          </p>
-          <p class="form_field">
-            <input type="radio" value="primarily_formed_ballot_measure_committee" name="" id=""/>Primarily Formed Ballot Measure Committee
-          </p>
-          <p class="form_field">
-            <input type="radio" value="primarily_formed_candidate" name="" id=""/>Primarily Formed Candidate/Officeholder Committee
-          </p>
-        </div>
-      </section>
-      <section class="form_section">
-        <p class="section_title">Schedule A</p>
-        <div class="transactions">
-          <div class="transaction">
-            <div class="form_group inline">
-              <div class="form_field">
-                <input type="text" value="" name="" id="" placeholder="Date" />
-              </div>
-              <div class="form_field">
-                <input type="text" value="" name="" id="" placeholder="Contributor Name" />
-              </div>
-              <div class="form_field">
-                <input type="text" value="" name="" id="" placeholder="Transaction ID" />
-              </div>
+    <h1 class="page_name">California Form 460 CSV Generator</h1>
+    <!-- TODO submit form to generate CSV -->
+
+    <form action="" class="form">
+      <div class="form__section">
+        <h2 class="form__section__title">Timeline</h2>
+
+        <div class="form__section__content">
+          <div class="form__group">
+            <div class="form__input__wrapper">
+              <label class="form__input__label">
+              <!-- TODO: specify that this is the the period -->
+               From</label> <input class="form__input" type="date" />
             </div>
-            <div class="form_group inline">
-                <div class="form_field">
-                  <input type="text" value="" name="" id="" placeholder="Amount" />
-                </div>
-                <div class="form_field">
-                  <input type="text" value="" name="" id="" placeholder="Cummulative Year-to-date" />
-                </div>
+
+            <div class="form__input__wrapper">
+              <label class="form__input__label">To</label> <input class="form__input"
+              type="date" />
             </div>
-            <div class="form_group inline">
-              <p class="form_group_title">Contribution Code</p>
-              <div class="form_field">
-                <input type="radio" value="ind" name="" id=""/>IND<br />
-              </div>
-              <!-- TODO if IND enters occupation and employer -->
-              <div class="form_field">
-                <input type="radio" value="com" name="" id=""/>COM<br />
-              </div>
-              <div class="form_field">
-                <input type="radio" value="oth" name="" id=""/>OTH<br />
-              </div>
-              <div class="form_field">
-                <input type="radio" value="pty" name="" id=""/>PTY<br />
-              </div>
-              <div class="form_field">
-                <input type="radio" value="scc" name="" id=""/>SCC<br />
-              </div>
+          </div>
+
+          <div class="form__group">
+            <div class="form__input__wrapper">
+              <label class="form__input__label">Filing Date</label> <input class=
+              "form__input" type="date" />
+            </div>
+
+            <div class="form__input__wrapper">
+              <label class="form__input__label">Election Date</label> <input class=
+              "form__input" type="date" />
             </div>
           </div>
         </div>
-        <div class="btn">
-          <i class="fa fa-plus-circle icon"></i>
-        </div>
-      </section>
-      <section class="form_section">
-        <p class="section_title">Schedule B1</p>
-        <div class="transactions">
-          <div class="transaction">
-            <div class="form_group inline">
-              <div class="form_field">
-                <input type="" value="" name="" id="" placeholder="Transaction Date" />
-              </div>
-              <div class="form_field">
-                <input type="" value="" name="" id="" placeholder="Due Date" />
-              </div>
+      </div>
+
+      <div class="form__section">
+        <h2 class="form__section__title">Committee/Candidate</h2>
+
+        <div class="form__section__content">
+          <div class="form__group">
+            <div class="form__input__wrapper">
+              <label class="form__input__label">Name</label> <input class="form__input"
+              type="text" />
             </div>
-            <div class="form_group inline">
-                <div class="form_field">
-                  <input type="" value="" name="" id="" placeholder="Amount" />
-              </div>
-              <div class="form_field">
-                <input type="" value="" name="" id="" placeholder="Amount Beginning" />
-              </div>
-              <div class="form_field">
-                <input type="" value="" name="" id="" placeholder="Amount This Period" />
-              </div>
-            </div>
-            <div class="form_group inline">
-              <div class="form_field">
-                <input type="" value="" name="" id="" placeholder="Amount Paid" />
-              </div>
-              <div class="form_field">
-                <input type="" value="" name="" id="" placeholder="Amount Forgiven" />
-              </div>
-              <div class="form_field">
-                <input type="" value="" name="" id="" placeholder="Amount Close" />
-              </div>
-            </div>
-            <div class="form_group inline">
-              <div class="form_field">
-                <input type="" value="" name="" id="" placeholder="Cummulative Year-to-date" />
-              </div>
-              <div class="form_field">
-                <input type="" value="" name="" id="" placeholder="Interest Rate" />
-              </div>
+
+            <div class="form__input__wrapper">
+              <label class="form__input__label">ID</label> <input class="form__input"
+              type="number" />
             </div>
           </div>
-          <div class="btn">
-            <i class="fa fa-plus-circle icon"></i>
-          </div>
-        </div>
-      </section>
-      <section class="form_section">
-        <p class="section_title">Schedule E</p>
-        <div class="transactions">
-          <div class="transaction">
-            <div class="form_group">
-              <div class="form_group inline">
-                <p class="form_group_title">Name</p>
-                <div class="form_field">
-                  <input type="text" value="" name="" id="" placeholder="First" />
-                </div>
-                <div class="form_field">
-                  <input type="text" value="" name="" id="" placeholder="Last" />
-                </div>
-                <div class="form_field">
-                  <label for="">Entity Code</label>
-                  <select name="some_name" id="some_name" onchange="" size="1">
-                    <option value="option1">IND</option>
-                    <option value="option2">COM</option>
-                    <option value="option1">OTH</option>
-                    <option value="option2">PTY</option>
-                    <option value="option1">SCC</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form_group inline">
-                <p class="form_group_title">Address</p>
-                <div class="form_field">
-                  <input type="text" value="" name="" id="" placeholder="City" />
-                </div>
-                <div class="form_field">
-                  <input type="text" value="" name="" id="" placeholder="State" />
-                </div>
-                <div class="form_field">
-                  <input type="text" value="" name="" id="" placeholder="Zip Code" />
-                </div>
-              </div>
-            </div>
-            <div class="form_group inline">
-              <p class="form_group_title">Transacton</p>
-              <div class="form_field">
-                <input type="" value="" name="" id="" placeholder="ID" />
-              </div>
-              <div class="form_field">
-                <input type="" value="" name="" id="" placeholder="Entity Code" />
-              </div>
-              <div class="form_field">
-                <input type="text" value="" name="" id="" placeholder="Amount" />
-              </div>
-            </div>
-            <div class="form_field">
-              <label for="Expense Code">Expense Code</label>
-              <select name="some_name" id="some_name" multiple onchange="" size="1">
-                <option value="option1">CMP</option>
-                <option value="option2">LIT</option>
+
+          <div class="form__group">
+            <div class="form__input__wrapper">
+              <label class="form__input__label">Type</label> <select class=
+              "form__input-select" name="" id="">
+                <option value="office_holder" selected="selected">
+                  Office Holder
+                </option>
+
+                <option value="general_purpose_committee">
+                  General Purpose Committee
+                </option>
+
+                <option value="primarily_formed_ballot_measure_committee">
+                  Primarily Formed Ballot Measure Committee
+                </option>
               </select>
             </div>
-            <div class="form_field">
-              <input type="text" value="" name="" id="" placeholder="Description" />
-            </div>
           </div>
         </div>
-        <div class="btn">
-          <i class="fa fa-plus-circle icon"></i>
-        </div>
-      </section>
+      </div>
+
+      <div class="form__section_group">
+        <div class="form__section">
+          <div class="form__section__content">
+            <h2 class="form__section__title">Entity Info</h2>
+
+            <div class="form__input__wrapper">
+              <label class="form__input__label">Name</label>
+
+              <div class="form__input_group">
+                <input class="form__input" type="text" placeholder="First" />
+                <input class="form__input" type="text" placeholder="Last" />
+              </div>
+            </div>
+
+            <div class="form__input__wrapper">
+              <label class="form__input__label">Entity Code</label>
+
+              <div class="form__input_group">
+                <select class="form__input-select" name="" id="">
+                  <option value="" selected="selected" disabled="disabled" hidden="">
+                    Pick one
+                  </option><!-- TODO show occupation and employer if type is IND -->
+
+                  <option value="ind">
+                    Individual - IND
+                  </option>
+
+                  <option value="oth">
+                    Other - OTH
+                  </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form__input_group">
+              <div class="form__input__wrapper">
+                <label class="form__input__label">Occupation</label> <input class="form__input"
+                type="text" />
+
+              </div>
+              <div class="form__input__wrapper">
+                <label class="form__input__label">Employer</label> <input class="form__input"
+                type="text" />
+
+              </div>
+            </div>
+
+            <div class="form__input_group">
+              <div class="form__input__wrapper">
+                <label class="form__input__label">City</label> <input class="form__input"
+                type="text" />
+              </div>
+
+              <div class="form__input__wrapper">
+                <!-- TODO validate state -->
+                 <label class="form__input__label">State</label> <input class=
+                "form__input" type="text" />
+              </div>
+
+              <div class="form__input__wrapper">
+                <label class="form__input__label">Zip Code</label> <input class=
+                "form__input" type="text" pattern="[0-9]{5}" />
+              </div>
+            </div>
+          </div>
+
+          <h2 class="form__section__title">Transaction Info</h2>
+
+          <div class="form__group">
+            <div class="form__input__wrapper">
+              <label class="form__input__label">Type</label> <select class=
+              "form__input-select" name="" id="">
+                <option value="" selected="selected" disabled="disabled" hidden="">
+                  Pick a transaction type
+                </option>
+
+                <option value="schedule_a">
+                  Schedule A
+                </option>
+
+                <option value="schedule_b1">
+                  Schedule B1
+                </option>
+
+                <option value="schedule_e">
+                  Schedule E
+                </option>
+              </select>
+            </div>
+          </div>
+
+          <div id="transaction_info">
+            <div class="form__group">
+              <div class="form__input__wrapper">
+                <label class="form__input__label">Transaction ID</label> <input class=
+                "form__input" type="text" />
+              </div>
+
+              <div class="form__input__wrapper">
+                <label class="form__input__label">Transaction Date</label> <input class=
+                "form__input" type="date" />
+              </div>
+            </div>
+
+            <div class="form__group">
+              <div class="btn_group--pull_right">
+                <a class="btn" id="add_transaction">Add Transaction</a>
+              </div>
+            </div>
+
+            <div class="form_group">
+                <label class="form__input__label">Amount</label> <input class=
+                "form__input" type="text" />
+            </div>
+          </div>
+        </div><!-- <div class="form__section" id="transactions"> -->
+        <!-- </div> -->
+      </div>
     </form>
-  </div>
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
-  crossorigin="anonymous"></script>
-  <script type="text/javascript">
-    
-  </script>
+  </div><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity=
+  "sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous" type=
+  "text/javascript">
+</script><script type="text/javascript" src="main.js">
+</script>
 </body>
+</html>
