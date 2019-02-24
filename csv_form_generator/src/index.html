@@ -1,19 +1,11 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta name="generator" content=
-  "HTML Tidy for Linux (vers 25 March 2009), see www.w3.org" />
   <meta charset="UTF-8" />
-
   <title>Form 460 CSV Generator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
   rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href=
-  "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-  type="text/css" />
   <link rel="stylesheet" href="styles.css" type="text/css" />
-  <!-- TODO remove when done -->
-  <!-- <meta http-equiv="refresh" content="10" > -->
 </head>
 
 <body>
@@ -112,7 +104,7 @@
               <div class="form__input_group">
                 <select class="form__input-select" name="" id="">
                   <option value="" selected="selected" disabled="disabled" hidden="">
-                    Pick one
+                    Pick an entity code
                   </option><!-- TODO show occupation and employer if type is IND -->
 
                   <option value="ind">
@@ -163,7 +155,7 @@
           <div class="form__group">
             <div class="form__input__wrapper">
               <label class="form__input__label">Type</label> <select class=
-              "form__input-select" name="" id="">
+              "form__input-select" name="" id="transaction_type">
                 <option value="" selected="selected" disabled="disabled" hidden="">
                   Pick a transaction type
                 </option>
@@ -183,38 +175,50 @@
             </div>
           </div>
 
-          <div id="transaction_info">
-            <div class="form__group">
-              <div class="form__input__wrapper">
-                <label class="form__input__label">Transaction ID</label> <input class=
-                "form__input" type="text" />
-              </div>
-
-              <div class="form__input__wrapper">
-                <label class="form__input__label">Transaction Date</label> <input class=
-                "form__input" type="date" />
-              </div>
-            </div>
-
-            <div class="form__group">
-              <div class="btn_group--pull_right">
-                <a class="btn" id="add_transaction">Add Transaction</a>
-              </div>
-            </div>
-
-            <div class="form_group">
-                <label class="form__input__label">Amount</label> <input class=
-                "form__input" type="text" />
+          <div class="form__group">
+            <div class="form__input__wrapper">
+              <label class="form__input__label">Transaction ID</label> <input class=
+              "form__input" type="text" />
             </div>
           </div>
-        </div><!-- <div class="form__section" id="transactions"> -->
-        <!-- </div> -->
+
+
+          <div class="form__group">
+            <div class="form__input__wrapper">
+              <label class="form__input__label">Transaction Date</label> <input class=
+              "form__input" type="date" />
+            </div>
+
+            <div class="form__input__wrapper">
+              <label class="form__input__label">Date Through</label> <input class=
+              "form__input" type="date" />
+            </div>
+          </div>
+
+          <div class="form__group">
+            <div class="form__input__wrapper">
+              <label class="form__input__label">Description</label> <input class=
+              "form__input" type="text" />
+            </div>
+          </div>
+
+          <div id="transaction_info"> 
+            <!-- html content added here depending on transaction type -->
+          </div>
+
+          <div class="form__group">
+            <div class="btn_group--pull_right">
+              <a class="btn" id="add_transaction">Add Transaction</a>
+            </div>
+          </div>
+
+        </div>
       </div>
     </form>
-  </div><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity=
-  "sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous" type=
-  "text/javascript">
-</script><script type="text/javascript" src="main.js">
+    </div>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"> </script>
+    <script src="main.js">
 </script>
 </body>
 </html>
+
