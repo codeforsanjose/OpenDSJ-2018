@@ -33,7 +33,7 @@ You will need to install selenium, chromedriver, and access to chrome browser fo
 
 Do not click in the chromedriver environments while they are scraping files. The additional input has been found to disrupt the xpath functions while selecting hidden javascript elements. This results in an error and you'll have to restart the scrapers from the beginning.
 
-### Recent Changes
+### Ways to improve web scraper
 
 - Clean up the code base (DRY and PEP8)
 - Replace selenium with  scrapy POST requests (faster)
