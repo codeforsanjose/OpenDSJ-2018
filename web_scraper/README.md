@@ -16,7 +16,7 @@ $ git clone https://github.com/codeforsanjose/OpenDSJ-2018.git
 $ cd web_scraper
 $ cd version2
 ```
-2. Run the scraper: $ python scraper.py
+2. Run the scraper: `$ python scraper.py`
 
 3. Grab a cup of coffee and come back ~ 45min
 
@@ -25,7 +25,7 @@ At the end of scraping process, you should see a new directory called 'data' tha
 
 You will need to install selenium, chromedriver, and access to chrome browser for this scraper to work.
 
-1. Install Selenium: $ pip install selenium
+1. Install Selenium: `$ pip install selenium`
 2. Download chrome driver: http://chromedriver.chromium.org/downloads (add to PATH)
 3. Download Google Chrome Browser (in case you don't have)
 
