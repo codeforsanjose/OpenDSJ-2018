@@ -4,6 +4,7 @@ This is a selenium scraper that downloads pdfs and excel files from the San Jose
 You should expect to see multiple chromedriver environments (or chrome browsers), each dedicated to a specific page on the south tech host site. The setup phase could take a few minutes depending on how many pages have been added to the site.
 
 Version 1: scraper goes through the site page by page. Time to download all files: about 3 hours
+
 Version 2: tried implementing OOP for better structure and extensibility, also improved speed using python's multiprocessing (download files from each page simultaneously). Time to download all files: about 45 minutes
 
 - Using Python 3.7.2
