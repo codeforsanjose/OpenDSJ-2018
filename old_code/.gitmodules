@@ -1,3 +1,0 @@
-[submodule "csv-to-json"]
-	path = csv-to-json
-	url = https://github.com/cparker15/csv-to-json

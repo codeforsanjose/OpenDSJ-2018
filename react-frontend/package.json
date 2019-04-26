@@ -1,0 +1,57 @@
+{
+  "name": "open-dsj-frontend",
+  "version": "1.0.0",
+  "description": "React application for an application to disclose political candidate's financial donors",
+  "main": "server.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint server.js --fix && ./node_modules/.bin/eslint client --fix",
+    "start": "npm run build && npm run server",
+    "build": "./node_modules/.bin/webpack --config ./webpack.config.js",
+    "build:dev": "./node_modules/.bin/webpack --config ./webpack.config.js -w",
+    "server": "NODE_ENV=prod node ./server.js",
+    "server:dev": "NODE_ENV=dev nodemon ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codeforsanjose/OpenDSJ-2018.git"
+  },
+  "author": "Annie Steenson @lilannie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codeforsanjose/OpenDSJ-2018/issues"
+  },
+  "homepage": "https://github.com/codeforsanjose/OpenDSJ-2018#readme",
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.3.3",
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-redux": "^6.0.1",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1",
+    "redux-act-async": "^1.7.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "coveralls": "^3.0.2",
+    "css-loader": "^2.1.0",
+    "eslint": "^5.14.1",
+    "eslint-plugin-react": "^7.12.4",
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.10",
+    "redux-logger": "^3.0.6",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.0"
+  }
+}
