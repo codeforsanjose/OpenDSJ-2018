@@ -14,13 +14,18 @@ data/11:6:2018-General-Election-SJC-candidate-campaign-data/SJC_D9_KalenGallaghe
 data/11:6:2018-General-Election-SJC-candidate-campaign-data/SJC_D9_PamFoley/.DS_Store
 
 # Node JS
+<<<<<<< HEAD
 # nov_2018_code/react-frontend/node_modules
 **/node_modules
+=======
+react-frontend/node_modules
+>>>>>>> master
 
 # misc
 *.swp
-nov_2018_code/react-frontend/npm-debug.log*
-nov_2018_code/react-frontend/yarn-debug.log*
+
+react-frontend/npm-debug.log*
+react-frontend/yarn-debug.log*
 
 # python virtual env
 utils/lib64
