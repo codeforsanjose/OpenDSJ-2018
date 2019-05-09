@@ -1,0 +1,224 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <title>Form 460 CSV Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+  rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+
+<body>
+  <!-- TODO rename BEM classes -->
+
+  <div class="wrapper">
+    <h1 class="page_name">California Form 460 CSV Generator</h1>
+    <!-- TODO submit form to generate CSV -->
+
+    <form action="" class="form">
+      <div class="form__section">
+        <h2 class="form__section__title">Timeline</h2>
+
+        <div class="form__section__content">
+          <div class="form__group">
+            <div class="form__input__wrapper">
+              <label class="form__input__label">
+              <!-- TODO: specify that this is the the period -->
+               From</label> <input class="form__input" type="date" />
+            </div>
+
+            <div class="form__input__wrapper">
+              <label class="form__input__label">To</label> <input class="form__input"
+              type="date" />
+            </div>
+          </div>
+
+          <div class="form__group">
+            <div class="form__input__wrapper">
+              <label class="form__input__label">Filing Date</label> <input class=
+              "form__input" type="date" />
+            </div>
+
+            <div class="form__input__wrapper">
+              <label class="form__input__label">Election Date</label> <input class=
+              "form__input" type="date" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form__section">
+        <h2 class="form__section__title">Committee/Candidate</h2>
+
+        <div class="form__section__content">
+          <div class="form__group">
+            <div class="form__input__wrapper">
+              <label class="form__input__label">Name</label> <input class="form__input"
+              type="text" />
+            </div>
+
+            <div class="form__input__wrapper">
+              <label class="form__input__label">ID</label> <input class="form__input"
+              type="number" />
+            </div>
+          </div>
+
+          <div class="form__group">
+            <div class="form__input__wrapper">
+              <label class="form__input__label">Type</label> <select class=
+              "form__input-select" name="" id="">
+                <option value="office_holder" selected="selected">
+                  Office Holder
+                </option>
+
+                <option value="general_purpose_committee">
+                  General Purpose Committee
+                </option>
+
+                <option value="primarily_formed_ballot_measure_committee">
+                  Primarily Formed Ballot Measure Committee
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form__section_group">
+        <div class="form__section">
+          <div class="form__section__content">
+            <h2 class="form__section__title">Entity Info</h2>
+
+            <div class="form__input__wrapper">
+              <label class="form__input__label">Name</label>
+
+              <div class="form__input_group">
+                <input class="form__input" type="text" placeholder="First" />
+                <input class="form__input" type="text" placeholder="Last" />
+              </div>
+            </div>
+
+            <div class="form__input__wrapper">
+              <label class="form__input__label">Entity Code</label>
+
+              <div class="form__input_group">
+                <select class="form__input-select" name="" id="">
+                  <option value="" selected="selected" disabled="disabled" hidden="">
+                    Pick an entity code
+                  </option><!-- TODO show occupation and employer if type is IND -->
+
+                  <option value="ind">
+                    Individual - IND
+                  </option>
+
+                  <option value="oth">
+                    Other - OTH
+                  </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form__input_group">
+              <div class="form__input__wrapper">
+                <label class="form__input__label">Occupation</label> <input class="form__input"
+                type="text" />
+
+              </div>
+              <div class="form__input__wrapper">
+                <label class="form__input__label">Employer</label> <input class="form__input"
+                type="text" />
+
+              </div>
+            </div>
+
+            <div class="form__input_group">
+              <div class="form__input__wrapper">
+                <label class="form__input__label">City</label> <input class="form__input"
+                type="text" />
+              </div>
+
+              <div class="form__input__wrapper">
+                <!-- TODO validate state -->
+                 <label class="form__input__label">State</label> <input class=
+                "form__input" type="text" />
+              </div>
+
+              <div class="form__input__wrapper">
+                <label class="form__input__label">Zip Code</label> <input class=
+                "form__input" type="text" pattern="[0-9]{5}" />
+              </div>
+            </div>
+          </div>
+
+          <h2 class="form__section__title">Transaction Info</h2>
+
+          <div class="form__group">
+            <div class="form__input__wrapper">
+              <label class="form__input__label">Type</label> <select class=
+              "form__input-select" name="" id="transaction_type">
+                <option value="" selected="selected" disabled="disabled" hidden="">
+                  Pick a transaction type
+                </option>
+
+                <option value="schedule_a">
+                  Schedule A
+                </option>
+
+                <option value="schedule_b1">
+                  Schedule B1
+                </option>
+
+                <option value="schedule_e">
+                  Schedule E
+                </option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form__group">
+            <div class="form__input__wrapper">
+              <label class="form__input__label">Transaction ID</label> <input class=
+              "form__input" type="text" />
+            </div>
+          </div>
+
+
+          <div class="form__group">
+            <div class="form__input__wrapper">
+              <label class="form__input__label">Transaction Date</label> <input class=
+              "form__input" type="date" />
+            </div>
+
+            <div class="form__input__wrapper">
+              <label class="form__input__label">Date Through</label> <input class=
+              "form__input" type="date" />
+            </div>
+          </div>
+
+          <div class="form__group">
+            <div class="form__input__wrapper">
+              <label class="form__input__label">Description</label> <input class=
+              "form__input" type="text" />
+            </div>
+          </div>
+
+          <div id="transaction_info"> 
+            <!-- html content added here depending on transaction type -->
+          </div>
+
+          <div class="form__group">
+            <div class="btn_group--pull_right">
+              <a class="btn" id="add_transaction">Add Transaction</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </form>
+    </div>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"> </script>
+    <script src="main.js">
+</script>
+</body>
+</html>
+
