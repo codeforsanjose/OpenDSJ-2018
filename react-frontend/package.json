@@ -1,7 +1,7 @@
 {
   "name": "open-dsj-frontend",
   "version": "1.0.0",
-  "description": "React application for an application to disclose political candidate's financial donors",
+  "description": "React application to visualize local compaign finance",
   "main": "server.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint server.js --fix && ./node_modules/.bin/eslint client --fix",
@@ -15,7 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/codeforsanjose/OpenDSJ-2018.git"
   },
-  "author": "Annie Steenson @lilannie",
+  "author": "Code for San Jose",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/codeforsanjose/OpenDSJ-2018/issues"
@@ -45,7 +45,7 @@
     "css-loader": "^2.1.0",
     "eslint": "^5.14.1",
     "eslint-plugin-react": "^7.12.4",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.12.0",
     "nodemon": "^1.18.10",
     "redux-logger": "^3.0.6",
     "sass-loader": "^7.1.0",
